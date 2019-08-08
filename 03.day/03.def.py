@@ -19,7 +19,7 @@ print(fun(50),fu)
 lgunba=[6,7,8,-1,0]
 
 def acc(number):
-    if type(number) not in {str,int}:
+    if type(number) not in {int}:
         response="please check your input~!"
     def add(number):
         result=0
@@ -27,4 +27,21 @@ def acc(number):
             result+=n
         return result
     return add(number)
-print(acc(4))
+print(acc(99))
+
+#将列表中的int数，自身从0开始叠加
+list01 = [1, 2, 3, 4, "string",5,100]
+def summ(line):
+    line01 = []
+    for i in line:
+        if type(i) not in {int}:
+            continue
+        result=0
+        for j in range(i+1):
+            result +=j
+        line01.append(result)
+    return line01
+print(summ(list01))
+
+
+

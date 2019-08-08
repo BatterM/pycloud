@@ -20,10 +20,11 @@
 
 import json
 
-
+#1\2\3
 def ips(path):
     source, guodu, zhuangtaima ={}, {}, {}
     char=['404', '200', '502', '503']
+#最火热的资源
     with open(file=path, mode='r', encoding='utf8') as log:
         for i in log.readlines():
             if i.split()[6] not in source.keys():
@@ -32,15 +33,40 @@ def ips(path):
                 source[i.split()[6]] += 1
         source = sorted(source.items(), key=lambda x: x[1], reverse=True)
     head = dict(source[0:10])
+#符合的状态码
     with open(file=path, mode='r', encoding='utf8') as log:
         for j in log.readlines():
             if j.split()[8] not in guodu.keys():
                 guodu.setdefault(j.split()[8], 1)
             else:
                 guodu[j.split()[8]] += 1
-        # guodu = dict(sorted(guodu.items(), key=lambda x: x[1], reverse=True))
-        for c in guodu.keys():
+        for c in guodu:
             if c in char:
                 zhuangtaima.setdefault(c,guodu.get(c))
-    return head,zhuangtaima
+#访问量前10的ip及次数
+        iplist, ipdict = [], {}
+        with open('../02.day/access_log', 'r', encoding='utf8') as log:
+            for i in log.readlines():
+                iplist.append(i.split()[0])
+        for i in range(len(iplist)):
+            ipdict.setdefault(iplist[i], iplist.count(iplist[i]))
+        ipdict = (sorted(ipdict.items(), key=lambda x: x[1], reverse=True))
+        head01 = ipdict[0:10]
+
+    return head,zhuangtaima,head01
 print(ips('../02.day/access_log'))
+with open('ziyuan.json','w',encoding='utf8') as ziyuan:
+    json.dump(ips('../02.day/access_log'),ziyuan)
+
+#4
+ipip = {'192.168.161.10':13,'39.100.110.135':8,'1.1.1.1':11,'8.8.8.8':5}
+def paixu(ips01):
+    iplist03=list(ips01.items())
+    for i in range(len(iplist03)):
+        for j in range(len(iplist03)-i-1):
+            if iplist03[j][1]<iplist03[j+1][1]:
+                iplist03[j],iplist03[j+1]=iplist03[j+1],iplist03[j]
+    return iplist03
+print(paixu(ipip))
+
+#5
