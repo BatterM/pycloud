@@ -16,7 +16,6 @@ def fun(a,b=8):
     return s
 fu=fun(2)
 print(fun(50),fu)
-lgunba=[6,7,8,-1,0]
 
 def acc(number):
     if type(number) not in {int}:
