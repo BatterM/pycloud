@@ -4,7 +4,7 @@
 #author:BatterM
 #usage:test
 
-#1
+# 1
 # import json
 # dict01={}
 # with open(file='../02.day/access_log',mode='r',encoding='utf8') as log:

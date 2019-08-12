@@ -2,7 +2,7 @@
 #
 #date:2019-8-12
 #author:BatterM
-#usage:bibao
+#usage:decorator-router
 
 import functools
 
@@ -37,3 +37,5 @@ elif choose == 'cheak':
     cheak(user,passwd)
 else:
     print('没有这个页面')
+
+

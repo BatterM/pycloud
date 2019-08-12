@@ -2,7 +2,7 @@
 #
 #date:2019-8-12
 #author:BatterM
-#usage:bibao
+#usage:decorator
 
 
 import functools
