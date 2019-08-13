@@ -16,10 +16,27 @@ class Box:        #定义类
         vo=self.length*self.width*self.height
         return vo
 
+    @classmethod
+    def creatBox(cls,length,width,height):
+        return cls(length=length,width=width,height=height)
+
+    @staticmethod
+    def erwuzai(*args,**kwargs):
+        return ('''
+        thanks you man!
+        you're right!!''')
+
 paperBox=Box(20,30,10)   #实例化
 
 v=paperBox.volume()     #调用类的方法
 print(v)
-paperBox.length=10
+paperBox.__length=10
 v=paperBox.volume()
 print(v)
+
+tiao=Box.creatBox(20,10,10)
+v=tiao.volume()
+print(v)
+
+print(paperBox.erwuzai())
+print(tiao.erwuzai())
