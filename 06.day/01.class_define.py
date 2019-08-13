@@ -12,15 +12,15 @@ class Box:        #定义类
         self.width=width
         self.height=height
 
-    def volume(self):      #定义方法
+    def volume(self):      #定义成员方法
         vo=self.length*self.width*self.height
         return vo
 
-    @classmethod
+    @classmethod            #类方法
     def creatBox(cls,length,width,height):
         return cls(length=length,width=width,height=height)
 
-    @staticmethod
+    @staticmethod           #静态方法
     def erwuzai(*args,**kwargs):
         return ('''
         thanks you man!
