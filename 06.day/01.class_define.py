@@ -24,7 +24,7 @@ class Box:        #定义类
     def erwuzai(*args,**kwargs):
         return ('''
         thanks you man!
-        you're right!!''')
+        you're right!!!''')
 
 paperBox=Box(20,30,10)   #实例化
 
