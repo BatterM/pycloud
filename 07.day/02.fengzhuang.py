@@ -55,16 +55,25 @@ class Box:
     def getVolume(self):
         print('this object was deleted!')
 
+    @staticmethod
+    def good(x):
+        return '{} everyday'.format(x)
 
 pBox = Box(20, 15, 10)
 v=pBox.getVolume
 print(v)
-
 pBox.getVolume = (10,20,30)
 print(pBox.getVolume)
 del pBox.getVolume
+#反射getattr hasattr setattr delattr
 print(getattr(pBox,'getVolume'))
 print(hasattr(pBox,'getVolume'))
+setattr(pBox,'x','perfact')
+print(pBox.x)
+print(pBox.good('perfact'))
+delattr(pBox,'x')
+print(pBox.x)
+
 
 #内省
 r=isinstance('goodman',str)
