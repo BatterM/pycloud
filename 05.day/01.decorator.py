@@ -34,4 +34,4 @@ def other():
     return print('我是自己人')
 other()
 print(other.__name__)
-print(help(other))
+help(other)
