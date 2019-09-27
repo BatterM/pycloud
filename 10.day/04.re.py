@@ -22,3 +22,4 @@ reopare03=re.compile(revar)
 opare03=reopare03.findall(date)
 print(opare03)
 
+

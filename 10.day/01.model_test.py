@@ -4,7 +4,7 @@
 #author:BatterM
 #usage:model test
 
-#1、库-包-模块
+# 1、库-包-模块
 # from sharedir.logAnalysis import logAnalysis
 #
 # ip=logAnalysis.ipsAnalysis('../02.day/access_log')
@@ -15,8 +15,8 @@
 #
 # source=logAnalysis.sourceAnalysis('../02.day/access_log')
 # print(source)
-
-#2、模块
+#
+# 2、模块
 # import sharedir.logAnalysis.logAnalysis
 #
 # ip=sharedir.logAnalysis.logAnalysis.ipsAnalysis('../02.day/access_log')

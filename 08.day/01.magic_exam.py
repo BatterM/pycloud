@@ -14,11 +14,11 @@
 import random
 class Renwu:
     Buff=random.randint(20,100)
-    def __new__(cls, *args, **kwargs):
-        print('new')
-        if not hasattr(cls,'instence'):
-            cls.instence=super().__new__(cls)
-        return cls.instence
+    # def __new__(cls, *args, **kwargs):
+    #     print('new')
+    #     if not hasattr(cls,'instence'):
+    #         cls.instence=super().__new__(cls)
+    #     return cls.instence
 
     def __init__(self,blood,attack,energy,cost):
         self.blood=blood
@@ -40,21 +40,21 @@ rz=Renwu(750,100,320,60)
 print(id(rz))
 gl=Renwu(1000,60,0,0)
 print(id(gl))
-# for i in range(100):
-#     if i % 2==0:
-#         if rz.blood<=0:
-#             print('rz的血量不足，gl赢了！！')
-#             break
-#         elif rz.energy<=0:
-#             print('rz的能量不足，gl赢了！！')
-#             break
-#         rz.attackOprea(gl)
-#         print('rz attack gl :')
-#     else:
-#         if gl.blood<=0:
-#             print('gl的血量不足，rz赢了！！')
-#             break
-#         gl.attackOprea(rz)
-#         print('gl zttack rz :')
-#     print('rz info: {}'.format(rz.zt()))
-#     print('gl info: {}'.format(gl.zt()))
+for i in range(100):
+    if i % 2==0:
+        if rz.blood<=0:
+            print('rz的血量不足，gl赢了！！')
+            break
+        elif rz.energy<=0:
+            print('rz的能量不足，gl赢了！！')
+            break
+        rz.attackOprea(gl)
+        print('rz attack gl :')
+    else:
+        if gl.blood<=0:
+            print('gl的血量不足，rz赢了！！')
+            break
+        gl.attackOprea(rz)
+        print('gl zttack rz :')
+    print('rz info: {}'.format(rz.zt()))
+    print('gl info: {}'.format(gl.zt()))

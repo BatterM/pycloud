@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <link rel="stylesheet" href="webcss.css"/>
+    <script src="jquery-3.1.1.js"></script>
+    <script src="jqurey.js"></script>
+</head>
+<body>
+<!--<body style="background-image:url('三吉彩花.jpg');background-size:50%;tex">-->
+<!--<img src="三吉彩花.jpg" height="1523" width="1080"/>-->
+<div class="css1" style=" text-align:center;">THIS IS LOGIN PAGE</div>
+<p style=" text-align:center;">PLEASE INPUT YOUR INFORMATION:</p>
+<form action="" method="POST" enctype="multipart/form-data">
+    <p style=" text-align:center;">姓名：<input type="text"></p>
+    <p style=" text-align:center;">密码：<input type="password"></p>
+    <div class="text" style=" text-align:center;">
+        性别：
+            <input type="radio" name="sex" value="1" checked="checked"/>Man
+            <input type="radio" name="sex" value="2"/>Woman
+    </div>
+    <div class="text" style="color: blue;size: 10px;text-align:center;">
+        爱好：
+            <input type="checkbox" name="hobby_book" value="1" checked="checked"/>book
+            <input type="checkbox" name="hobby_music" value="2"/>music
+            <input type="checkbox" name="hobby_movie" value="2"/>movie
+            <input type="checkbox" name="hobby_sprot" value="2"/>sport
+    </div>
+    <p style=" text-align:center;"><input type="submit"></p>
+</form>
+<div style=" text-align:center;">
+    <a href="http://www.baidu.com" id="haver1">疑难解答</a>
+</div>
+
+<div id="start">start</div>
+<p>a</p><p>b</p><p>c</p>
+<script>
+    alert($("p").eq(-1).text());
+</script>
+
+</body>
+</html>

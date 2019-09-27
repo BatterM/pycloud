@@ -4,7 +4,6 @@
 #author:BatterM
 #usage:nginx log
 
-
 class Nginxlog:
     def __init__(self,path):
         self.path=path
